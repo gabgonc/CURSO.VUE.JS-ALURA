@@ -2,7 +2,7 @@
 
 MÓDULO 1 - Preparando o ambiente (CONCLUÍDO)
 
-MÓDULO 2 - Adequando o template gerado (EM ANDAMENTO)
+MÓDULO 2 - Adequando o template gerado (CONCLUÍDO)
 
 MÓDULO 3 - Integração com API de terceiros (EM ANDAMENTO)
 
@@ -10,7 +10,7 @@ MÓDULO 4 - Criando componentens e encapsulamento de view (EM ANDAMENTO)
 
 MÓDULO 5 - Melhorando a UX com animações (EM ANDAMENTO)
 
-MÓDULO 6 - Single page applications e criação de rotas (EM ANDAMENTO)
+MÓDULO 6 - Sisngle page applications e criação de rotas (EM ANDAMENTO)
 
 MÓDULO 7 - Um pouco mais sobre componentes (EM ANDAMENTO)
 
