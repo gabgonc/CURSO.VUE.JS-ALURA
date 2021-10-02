@@ -4,7 +4,7 @@ MÓDULO 1 - Preparando o ambiente (CONCLUÍDO)
 
 MÓDULO 2 - Adequando o template gerado (CONCLUÍDO)
 
-MÓDULO 3 - Integração com API de terceiros (EM ANDAMENTO)
+MÓDULO 3 - Integração com API de terceiros (CONCLUÍDO)
 
 MÓDULO 4 - Criando componentens e encapsulamento de view (EM ANDAMENTO)
 
