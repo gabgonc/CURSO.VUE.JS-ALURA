@@ -5,11 +5,12 @@
   <div class="corpo">
     <h1 class="centralizado">{{ titulo }}</h1>
 
+    <input type="search" class="filtro" @input = " filtro = $event.target.value" placeholder="filtre por parte do filtro"/>  
     <ul class="lista-fotos">
-      <li class="lista-fotos-item" v-for="foto of fotos">
+      <li class="lista-fotos-item" v-for="foto of fotosComFiltro" :key="foto">
 
           <meu-painel :titulo="foto.titulo">
-            <img class="imagem-responsiva" :src="foto.url" :alt="foto.titulo">
+            <imagem-responsiva :url="foto.url" :titulo="foto.titulo"/>:
           </meu-painel>        
       </li>
     </ul>
@@ -19,19 +20,33 @@
 
 <script>
 
-import Painel from './components/shared/painel/Painel.vue';
+import Painel from './components/shared/painel/Painel.vue'
+import ImagemResponsiva from './Components/Shared/imagem-responsiva/imagem-responsiva.vue'
+
 export default {
 
   components:{
 
-    'meu-painel' : Painel
+    'meu-painel' : Painel,
+    'imagem-responsiva': ImagemResponsiva
   },
   data() {
 
     return {
 
       titulo: 'Alurapic', 
-      fotos: []
+      fotos: [],
+      filtro: ''
+    }
+  },
+  computed: {
+    fotosComFiltro () {
+      if(this.filtro){
+        let exp = new RegExp(this.filtro.trim(), 'i')
+        return this.fotos.filter(foto => exp.test(foto.titulo))
+      } else {
+        return this.fotos
+      }
     }
   },
 
@@ -75,9 +90,8 @@ margin: 0 auto;
   display: inline-block;
 }
 
-.imagem-responsiva{
-
+.filtro{
+  display: block;
   width: 100%;
 }
-
 </style>
